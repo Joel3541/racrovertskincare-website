@@ -1,7 +1,7 @@
 :root {
-  --green: #355E3B;
+  --green: #9CAF88;
   --light-green: #4f7c5b;
-  --cream: #F3F5EE;
+  --cream: #FAF7F2;
 }
 
 * {
@@ -13,13 +13,13 @@
 body {
   font-family: 'Montserrat', sans-serif;
   background: var(--cream);
-  color: #333;
+  color: #FAF7F2;
   scroll-behavior: smooth;
 }
 
 body.dark {
-  --green: #9BC59D;
-  --cream: #121212;
+  --green: #9CAF88;
+  --cream: #FAF7F2;
   background: #121212;
   color: #eaeaea;
 }
@@ -178,8 +178,8 @@ footer {
 /* New modifications */
 
 :root {
-  --green: #355E3B;
-  --cream: #F3F5EE;
+  --green: #9CAF88;
+  --cream: #FAF7F2;
 }
 
 * { box-sizing: border-box; }
@@ -393,6 +393,7 @@ body.dark .modal-content {
   color: var(--green);
   cursor: pointer;
 }
+
 
 
 
