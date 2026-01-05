@@ -17,6 +17,13 @@ body {
   scroll-behavior: smooth;
 }
 
+body.dark {
+  --green: #9BC59D;
+  --cream: #121212;
+  background: #121212;
+  color: #eaeaea;
+}
+
 /* NAVBAR */
 .navbar {
   position: fixed;
@@ -355,4 +362,5 @@ footer {
     display: block;
   }
 }
+
 
