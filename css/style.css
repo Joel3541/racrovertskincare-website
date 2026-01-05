@@ -24,6 +24,13 @@ body.dark {
   color: #eaeaea;
 }
 
+body.dark .email-form input,
+body.dark .email-form textarea {
+  background: #1e1e1e;
+  border: 1px solid #444;
+  color: #fff;
+}
+
 /* NAVBAR */
 .navbar {
   position: fixed;
@@ -415,6 +422,7 @@ body.dark .modal-content {
   align-self: center;
   padding: 0.9rem 2.5rem;
 }
+
 
 
 
