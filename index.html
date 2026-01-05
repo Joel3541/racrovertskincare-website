@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Racrovet Skincare</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="assets/img/logo.jpeg">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<header class="navbar">
+  <div class="nav-left">
+    <!-- LOGO PLACEHOLDER -->
+    <img src="assets/img/logo.jpeg" alt="Racrovet Skincare Logo" class="logo-img">
+    <span class="logo-text"></span>
+  </div>
+
+  <div class="menu-toggle" id="menuToggle">
+    <i class="fas fa-bars"></i>
+  </div>
+
+  <nav id="navMenu">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#products">Products</a>
+    <a href="#compliance">Compliance</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<!-- ================= HERO ================= -->
+<section id="home" class="hero">
+  <div class="hero-content">
+    <h1>Natural Skincare and Haircare Made with Care</h1>
+    <p>
+      Vegan, cruelty-free formulations crafted with plant-based oils and botanicals
+      to nourish, hydrate, and support healthy-looking skin and hair.
+    </p>
+    <button onclick="openWhatsApp()">Shop Racrovet Skincare</button>
+  </div>
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section id="about" class="section">
+  <h2>About Racrovet Skincare</h2>
+  <p>
+    Racrovet Skincare is a clean beauty brand dedicated to nourishing skin and hair
+    with thoughtfully crafted, plant-based formulas. We focus on high-quality oils,
+    butters, herbs, and botanicals that help promote moisture, strength, and overall
+    skin and scalp health.
+  </p>
+  <p>
+    Each product is vegan, cruelty-free, and made without unnecessary fillers.
+    At Racrovet, self-care is more than a routine,it’s a lifestyle.
+  </p>
+</section>
+
+<!-- ================= PRODUCTS ================= -->
+<section id="products" class="section bg-light">
+  <h2>Our Products</h2>
+
+  <div class="product-grid">
+
+    <!-- PRODUCT CARD -->
+    <div class="product-card" onclick="openModal('Hair Growth Oil','Scalp nourishing botanical oil','$18.00')">
+      <img src="assets/img/hair growth oil.jpeg" alt="Product Image">
+      <h3>Hair Growth Oil</h3>
+      <p>Plant-based oil blend for scalp nourishment</p>
+      <span>$18.00</span>
+    </div>
+
+    <div class="product-card" onclick="openModal('Hair Growth Butter','Deep hydration butter','$24.99')">
+      <img src="assets/img/hair growth butter.jpeg" alt="Product Image">
+      <h3>Hair Growth Butter</h3>
+      <p>Deep moisture with rich botanicals</p>
+      <span>$24.99</span>
+    </div>
+
+    <div class="product-card" onclick="openModal('Castor Oil','Lightweight glow oil','$18.99')">
+      <img src="assets/img/castor oil.jpeg" alt="Product Image">
+      <h3>Castor Oil</h3>
+      <p>Lightweight hydration for glowing skin</p>
+      <span>$18.99</span>
+    </div>
+
+    <div class="product-card" onclick="openModal('Applicator Bottles','Applicator for hair with scrubs','$4.50')">
+      <img src="assets/img/applicator bottles.jpeg" alt="Product Image">
+      <h3>Applicator Bottles</h3>
+      <p>Professional applicator bottles</p>
+      <span>$4.50</span>
+    </div>
+
+    <div class="center">
+    <button onclick="openWhatsApp()">More Products</button>
+    </div>
+
+</section>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<!-- ================= COMPLIANCE ================= -->
+<section id="compliance" class="section">
+  <h2>Ingredient Safety and Compliance</h2>
+
+  <p>
+    All ingredients used in Racrovet Skincare products are cosmetic-grade and permitted
+    for use in the United States. Ingredient names follow INCI standards and are listed
+    in descending order of predominance.
+  </p>
+  <p>
+    Racrovet Skincare maintains ingredient documentation and safety records in
+    accordance with MoCRA requirements.
+  </p>
+
+</section>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+<!-- ================= CONTACT ================= -->
+<section id="contact" class="section bg-light">
+  <h2>Contact and Company Information</h2>
+
+  <p><strong>Email:</strong> info@racrovets.com</p>
+  <p><strong>Business:</strong> Racrovet LLC (Racrovet Skincare)</p>
+  <p><strong>Location:</strong> Columbus, Ohio, USA</p>
+
+  <p>
+    Racrovet Skincare is a U.S.-based cosmetic brand offering vegan, cruelty-free
+    skincare and haircare products. All products are intended for external use only.
+  </p>
+
+  <p><strong>Customer Support Hours:</strong><br>
+    Monday – Friday: 9:00 AM – 6:00 PM (EST)
+  </p>
+
+</section>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <p>
+    These products are cosmetic in nature and are not intended to diagnose, treat,
+    cure, or prevent any disease. Results may vary.
+  </p>
+
+  <div class="footer-links">
+    <a href="#">Privacy Policy</a>
+    <a href="#">Terms of Service</a>
+    <a href="#">Refund and Return Policy</a>
+    <a href="#">Shipping Policy</a>
+  </div>
+
+  <p>© 2026 Racrovet Skincare</p>
+</footer>
+
+<!-- ================= PRODUCT MODAL ================= -->
+<div class="modal" id="productModal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <h3 id="modalTitle"></h3>
+    <p id="modalDesc"></p>
+    <strong id="modalPrice"></strong>
+
+    <button onclick="openWhatsApp()">Order on WhatsApp</button>
+  </div>
+</div>
+
+<!-- BACK TO TOP -->
+<button id="toTop"><i class="fas fa-chevron-up"></i></button>
+
+<script src="js/script.js"></script>
+</body>
+</html>
