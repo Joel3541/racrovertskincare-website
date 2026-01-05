@@ -1,10 +1,8 @@
 // DARK MODE
 const darkToggle = document.getElementById("darkToggle");
-const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
 
 // Load saved preference
-if (localStorage.getItem("darkMode") === "enabled" || 
-   (!localStorage.getItem("darkMode") && prefersDark)) {
+if (localStorage.getItem("darkMode") === "enabled") {
   document.body.classList.add("dark");
 }
 
@@ -59,6 +57,7 @@ function openModal(title, desc, price) {
 function closeModal() {
   modal.style.display = "none";
 }
+
 
 
 
