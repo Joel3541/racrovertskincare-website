@@ -363,4 +363,37 @@ footer {
   }
 }
 
+body.dark .navbar,
+body.dark nav,
+body.dark .bg-light {
+  background: #1b1b1b;
+}
+
+body.dark .product-card {
+  background: #1e1e1e;
+}
+
+body.dark footer {
+  background: #0f0f0f;
+}
+
+body.dark a {
+  color: #9BC59D;
+}
+
+body.dark .modal-content {
+  background: #1e1e1e;
+  color: #fff;
+}
+
+.dark-toggle {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  color: var(--green);
+  cursor: pointer;
+}
+
+
+
 
