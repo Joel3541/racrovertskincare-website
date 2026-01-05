@@ -1,3 +1,24 @@
+// DARK MODE
+const darkToggle = document.getElementById("darkToggle");
+const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+// Load saved preference
+if (localStorage.getItem("darkMode") === "enabled" || 
+   (!localStorage.getItem("darkMode") && prefersDark)) {
+  document.body.classList.add("dark");
+}
+
+darkToggle.addEventListener("click", () => {
+  document.body.classList.toggle("dark");
+
+  if (document.body.classList.contains("dark")) {
+    localStorage.setItem("darkMode", "enabled");
+  } else {
+    localStorage.setItem("darkMode", "disabled");
+  }
+});
+
+
 // WHATSAPP
 function openWhatsApp() {
   window.open(
@@ -38,6 +59,7 @@ function openModal(title, desc, price) {
 function closeModal() {
   modal.style.display = "none";
 }
+
 
 
 
