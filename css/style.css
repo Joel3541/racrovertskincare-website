@@ -370,6 +370,7 @@ footer {
   }
 }
 
+/* DARK MODE TOGGLE FEATURES */
 body.dark .navbar,
 body.dark nav,
 body.dark .bg-light {
@@ -401,7 +402,7 @@ body.dark .modal-content {
   cursor: pointer;
 }
 
-
+/* EMAIL FORM */
 .email-form {
   max-width: 500px;
   margin: 2rem auto 0;
@@ -421,6 +422,43 @@ body.dark .modal-content {
 .email-form button {
   align-self: center;
   padding: 0.9rem 2.5rem;
+}
+
+/* DARK MODE TOGGLE ADDITIONAL FEATURES */
+.dark-toggle {
+  position: relative;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.dark-toggle .icon {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.dark-toggle .sun {
+  transform: translateY(100%);
+  opacity: 0;
+}
+
+body.dark .dark-toggle .moon {
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+body.dark .dark-toggle .sun {
+  transform: translateY(0);
+  opacity: 1;
 }
 
 
