@@ -68,7 +68,7 @@ body.dark .email-form textarea {
       rgba(243,245,238,0.88),
       rgba(243,245,238,0.88)
     ),
-    url("..assets/img/hero.jpg") center/cover no-repeat;
+    url("../assets/img/hero.jpg") center/cover no-repeat;
   transition: background 0.4s ease;
 }
 
@@ -267,7 +267,7 @@ nav a {
       rgba(243,245,238,0.88),
       rgba(243,245,238,0.88)
     ),
-    url("..assets/img/hero.jpg") center/cover no-repeat;
+    url("../assets/img/hero.jpg") center/cover no-repeat;
   transition: background 0.4s ease;
 }
 
@@ -479,6 +479,7 @@ body.dark .dark-toggle .sun {
   transform: translateY(0);
   opacity: 1;
 }
+
 
 
 
