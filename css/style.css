@@ -57,6 +57,17 @@ body.dark .email-form textarea {
 }
 
 /* HERO */
+
+.hero {
+  height: 100vh;
+  background: linear-gradient(rgba(243,245,238,0.85), rgba(243,245,238,0.85)),
+              url("../assets/img/hero.jpg") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
 .hero {
   min-height: 100vh;
   padding: 6rem 1.5rem;
@@ -256,6 +267,17 @@ nav a {
 }
 
 /* HERO */
+
+.hero {
+  min-height: 100vh;
+  padding: 6rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(rgba(243,245,238,.9),rgba(243,245,238,.9)),
+  url("../assets/img/hero.jpg") center/cover no-repeat;
+}
+
 .hero {
   min-height: 100vh;
   padding: 6rem 1.5rem;
@@ -479,6 +501,7 @@ body.dark .dark-toggle .sun {
   transform: translateY(0);
   opacity: 1;
 }
+
 
 
 
