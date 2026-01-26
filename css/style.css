@@ -502,6 +502,26 @@ body.dark .dark-toggle .sun {
   opacity: 1;
 }
 
+/* Animations Feature */
+.animate {
+  animation: fadeInUp 0.8s ease-out both;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
 
 
 
