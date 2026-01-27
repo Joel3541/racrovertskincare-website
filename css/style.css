@@ -534,6 +534,22 @@ body.dark .dark-toggle .sun {
   }
 }
 
+/* Coming Soon */
+.coming-soon-banner {
+  background: var(--bg-soft);
+  padding: 3rem 1.5rem;
+  text-align: center;
+}
+
+.waitlist-form {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+
+
 
 
 
