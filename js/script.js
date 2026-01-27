@@ -43,7 +43,6 @@ menuToggle.addEventListener("click", () => {
 });
 
 
-
 // MODAL
 const modal = document.getElementById("productModal");
 
@@ -57,6 +56,28 @@ function openModal(title, desc, price) {
 function closeModal() {
   modal.style.display = "none";
 }
+
+
+// ANIMATIONS SCRIPT
+const observer = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+          observer.unobserve(entry.target); // animate once
+        }
+      });
+    },
+    {
+      threshold: 0.15
+    }
+  );
+
+  document.querySelectorAll(".animate").forEach(el => {
+    observer.observe(el);
+  });
+
+
 
 
 
