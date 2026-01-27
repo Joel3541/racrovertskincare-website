@@ -59,23 +59,25 @@ function closeModal() {
 
 
 // ANIMATIONS SCRIPT
-const observer = new IntersectionObserver(
-    entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("show");
-          observer.unobserve(entry.target); // animate once
-        }
-      });
-    },
-    {
-      threshold: 0.15
-    }
-  );
+const reveals = document.querySelectorAll(".reveal");
 
-  document.querySelectorAll(".animate").forEach(el => {
-    observer.observe(el);
-  });
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("active");
+        observer.unobserve(entry.target); // animate once
+      }
+    });
+  },
+  {
+    threshold: 0.15, // reveal when 15% visible
+  }
+);
+
+reveals.forEach(reveal => observer.observe(reveal));
+
+
 
 
 
