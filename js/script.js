@@ -89,6 +89,18 @@ if (COMING_SOON) {
 }
 
 
+//NAVBAR MODIFICATION
+document.querySelectorAll(".dropdown > a").forEach(link => {
+  link.addEventListener("click", e => {
+    if (window.innerWidth <= 768) {
+      e.preventDefault();
+      link.nextElementSibling.classList.toggle("open");
+    }
+  });
+});
+
+
+
 
 
 
