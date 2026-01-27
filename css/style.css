@@ -591,6 +591,11 @@ body.dark .dark-toggle .sun {
   display: flex;
 }
 
+.dropdown-menu.open {
+  display: flex;
+}
+
+
 
 
 
