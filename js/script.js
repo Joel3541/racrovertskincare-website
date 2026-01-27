@@ -79,6 +79,19 @@ reveals.forEach(reveal => observer.observe(reveal));
 
 
 
+//CHECKOUT + HIDE PRICES
+const COMING_SOON = true;
+
+if (COMING_SOON) {
+  document.querySelectorAll(".price, .add-to-cart").forEach(el => {
+    el.style.display = "none";
+  });
+}
+
+
+
+
+
 
 
 
