@@ -208,7 +208,6 @@ footer {
 
 
 /* New modifications */
-
 :root {
   --green: #9CAF88;
   --cream: #FAF7F2;
@@ -267,7 +266,6 @@ nav a {
 }
 
 /* HERO */
-
 .hero {
   min-height: 100vh;
   padding: 6rem 1.5rem;
@@ -594,6 +592,7 @@ body.dark .dark-toggle .sun {
 .dropdown-menu.open {
   display: flex;
 }
+
 
 
 
