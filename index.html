@@ -3,332 +3,125 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Racrovet Skincare</title>
-
-  <!-- Favicon -->
+  <title>Racrovet Skincare | Healthy Hair Starts at the Scalp™</title>
   <link rel="icon" type="image/x-icon" href="assets/img/logo.jpeg">
-
-  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
-
-  <!-- Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<!-- ================= NAVBAR ================= -->
+<!-- NAVBAR -->
 <header class="navbar">
-  <div class="nav-left">
-    <!-- LOGO PLACEHOLDER -->
-    <img src="assets/img/logo.jpeg" alt="Racrovet Skincare Logo" class="logo-img">
-    <span class="logo-text"></span>
-  </div>
+  <a href="index.html" class="nav-left" style="text-decoration: none;">
+    <img src="assets/img/logo.jpeg" alt="Racrovet Skincare" class="logo-img" onerror="this.src='https://via.placeholder.com/50'">
+    <span class="logo-text">Racrovet</span>
+  </a>
 
-  <div class="menu-toggle" id="menuToggle">
-    <i class="fas fa-bars"></i>
-  </div>
-
-  <nav id="navMenu">
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#products">Products</a>
-    <a href="#compliance">Compliance</a>
-    <a href="#contact">Contact</a>  
-  </nav>
-
-  <nav>
-  <ul class= "nav-links dropdown menu">
-    <a href="shop.html">Shop</a>
-    
+  <ul class="nav-links" id="navMenu">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="shop.html">Shop</a></li>
     <li class="dropdown">
-      <a href="#">Body Care</a>
-      
+      <a href="#">Body Care <i class="fas fa-caret-down"></i></a>
       <ul class="dropdown-menu">
-        <li><a href="body-scrubs.html">Body Scrubs</a></li>
-        <li><a href="body-creams.html">Body Creams</a></li>
-        <li><a href="body-oils.html">Body Oils</a></li>
+        <li><a href="shop.html#body-scrubs">Body Scrubs</a></li>
+        <li><a href="shop.html#body-creams">Body Creams</a></li>
+        <li><a href="shop.html#body-oils">Body Oils</a></li>
       </ul>
     </li>
-    
-    <a href="wholesale.html">Wholesale</a>
-    <a href="consulting.html">Consulting</a>
-    </ul>
-    </nav>
-  
-  <!-- ================= Darkmode Button ================= -->
-<button id="darkToggle" class="dark-toggle" aria-label="Toggle Dark Mode">
-  <span class="icon moon">🌙</span>
-  <span class="icon sun">☀️</span>
-</button>
-  
-</header>
+    <li><a href="wholesale.html">Wholesale</a></li>
+    <li><a href="consulting.html">Consulting</a></li>
+  </ul>
 
+  <div style="display: flex; align-items: center; gap: 15px;">
+    <button id="darkToggle" class="dark-toggle" aria-label="Toggle Dark Mode">
+      <span class="icon moon">🌙</span>
+      <span class="icon sun">☀️</span>
+    </button>
+    <div class="menu-toggle" id="menuToggle">
+      <i class="fas fa-bars"></i>
+    </div>
+  </div>
+</header>
     
-<!-- ================= HERO ================= -->
+<!-- HERO SECTION -->
 <section id="home" class="hero reveal">
   <div class="hero-content">
-    <h1>Healthy Hair and Skin Starts With Care.</h1>
-    <p>
-      Vegan, cruelty-free formulations crafted with plant-based oils and botanicals
-      to nourish, hydrate, and support healthy-looking skin and hair.
-    </p>
-    <button onclick="openWhatsApp()">Shop Racrovet Skincare</button>
+    <h1>Healthy Hair Starts at the Scalp™</h1>
+    <p>A simple, scalp-focused 3-step routine designed to nourish, strengthen, and support healthy hair growth.</p>
+    
+    <!-- JS will hide the add-to-cart button and show the notify button -->
+    <a href="hair-growth-kit.html" class="btn add-to-cart">Shop the Essentials Kit</a>
+    <a href="#waitlist" class="btn notify-btn" style="display:none;">Join the Waitlist</a>
   </div>
 </section>
 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>  
+<!-- HOW IT WORKS SECTION -->
+<section class="section bg-light reveal">
+  <h2>Our 3-Step Routine</h2>
+  <p style="text-align: center; max-width: 700px; margin: 0 auto 2rem;">Our complete system hydrates the scalp, stimulates growth, and helps retain length.</p>
   
-<!-- ================= Coming Sooon ================= -->
-<section id="coming-soon-banner" class="section reveal">
-  <h2>Products Coming Soon</h2>
-  <p>
-    Our products are currently in production.
-    We’re carefully preparing each formula to ensure quality, safety, and the care your hair and skin deserve.
-  </p>
-
-  <form class="waitlist-form">
-    <input type="email" placeholder="Enter your email" required />
-    <button type="submit">Join the Waitlist</button>
-  </form>
+  <div class="steps-container">
+    <div class="step-box">
+      <h3>Step 1: Hydrate</h3>
+      <p>Refresh the scalp with the Hair Growth Spray.</p>
+    </div>
+    <div class="step-box">
+      <h3>Step 2: Treat</h3>
+      <p>Nourish the scalp using Ginger & Cloves Hair Oil.</p>
+    </div>
+    <div class="step-box">
+      <h3>Step 3: Seal</h3>
+      <p>Lock in moisture with the Hair Butter.</p>
+    </div>
+  </div>
 </section>
 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>    
-  
-<!-- ================= ABOUT ================= -->
-<section id="about" class="section reveal">
+<!-- COMING SOON BANNER (Waitlist) -->
+<section id="waitlist" class="section reveal">
+  <div class="coming-soon-banner">
+    <h2>Products Coming Soon</h2>
+    <p>Our products are currently in production. We’re carefully preparing each formula to ensure quality, safety, and the care your hair and skin deserve.</p>
+    <form class="waitlist-form">
+      <input type="email" placeholder="Enter your email address" required />
+      <button type="submit" class="btn">Notify Me</button>
+    </form>
+  </div>
+</section>
+
+<!-- ABOUT SECTION -->
+<section id="about" class="section bg-light reveal">
   <h2>About Racrovet Skincare</h2>
-  <p>
-    Racrovet Skincare is a clean beauty brand dedicated to nourishing skin and hair
-    with thoughtfully crafted, plant-based formulas. We focus on high-quality oils,
-    butters, herbs, and botanicals that help promote moisture, strength, and overall
-    skin and scalp health.
-  </p>
-  <p>
-    Each product is vegan, cruelty-free, and made without unnecessary fillers.
-    At Racrovet, self-care is more than a routine,it’s a lifestyle.
-  </p>
+  <p>Racrovet Skincare was created with a simple belief: healthy hair growth begins at the foundation—the scalp. 
+    We design scalp-focused hair care using botanical-rich formulas and simple routines that fit real lifestyles.</p>
+  <p style="margin-top: 1rem;"><strong>Philosophy:</strong> Scalp-first care • Consistency over hype • Carefully Made.</p>
 </section>
 
-<!-- ================= PRODUCTS ================= -->
-<section id="products" class="section bg-light">
-  <h2>Our Products</h2>
-
-  <div class="product-grid">
-
-    <!-- PRODUCT CARD -->
-    <div class="product-card" onclick="openModal('Hair Growth Oil','Scalp nourishing botanical oil','$18.00')">
-      <img src="assets/img/hair growth oil.jpeg" alt="Product Image">
-      <h3>Hair Oil</h3>
-      <p>Plant-based oil blend for scalp nourishment</p>
-      <span>$18.00</span>
-    </div>
-
-    <div class="product-card" onclick="openModal('Hair Growth Butter','Deep hydration butter','$24.99')">
-      <img src="assets/img/hair growth butter.jpeg" alt="Product Image">
-      <h3>Hair Butter</h3>
-      <p>Deep moisture with rich botanicals</p>
-      <span>$24.99</span>
-    </div>
-
-    <div class="product-card" onclick="openModal('Castor Oil','Lightweight glow oil','$18.99')">
-      <img src="assets/img/castor oil.jpeg" alt="Product Image">
-      <h3>Castor Oil</h3>
-      <p>Lightweight hydration for glowing skin</p>
-      <span>$18.99</span>
-    </div>
-
-    <div class="product-card" onclick="openModal('Applicator Bottles','Applicator for hair with scrubs','$4.50')">
-      <img src="assets/img/applicator bottles.jpeg" alt="Product Image">
-      <h3>Applicator Bottles</h3>
-      <p>Professional applicator bottles</p>
-      <span>$4.50</span>
-    </div>
-
-    <div class="center">
-    <button onclick="openWhatsApp()">More Products</button>
-    </div>
-
-</section>
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
-<!-- ================= COMPLIANCE ================= -->
-<section id="compliance" class="section reveal">
-  <h2>Ingredient Safety and Compliance</h2>
-
-  <p>
-    All ingredients used in Racrovet Skincare products are cosmetic-grade and permitted
-    for use in the United States. Ingredient names follow INCI standards and are listed
-    in descending order of predominance.
-  </p>
-  <p>
-    Racrovet Skincare maintains ingredient documentation and safety records in
-    accordance with MoCRA requirements.
-  </p>
-
-</section>
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
-
-<!-- ================= CONTACT ================= -->
-<section id="contact" class="section bg-light reveal">
-  <h2>Contact and Company Information</h2>
-
-  <p><strong>Email:</strong> info@racrovetskincare.com</p>
-  <p><strong>Business:</strong> Racrovet LLC (Racrovet Skincare)</p>
-  <p><strong>Location:</strong> Columbus, Ohio, USA</p>
-
-  <p>
-    Racrovet Skincare is a U.S. based cosmetic brand offering vegan, cruelty-free
-    skincare and haircare products. All products are intended for external use only.
-  </p>
-
-  <p><strong>Customer Support Hours:</strong><br>
-    Monday – Friday: 9:00 AM – 6:00 PM (EST)
-  </p>
-
-</section>
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
-<!-- ================= EMAIL SIGNUP ================= -->
-<section id="newsletter" class="section reveal">
-  <h2>Stay Connected</h2>
-  <p>
-  Enter your email to reach Racrovet Skincare directly for inquiries, product questions, or collaborations.
-  </p>
-
-  <form class="email-form"
-        action="mailto:inf@racrovetskincare.com"
-        method="POST"
-        enctype="text/plain">
-        
-    <input 
-      type="email" 
-      name="email"
-      placeholder="Enter your email address"
-      required
-    >
-
-    <textarea 
-      name="message"
-      placeholder="Your message (optional)"
-      rows="4"></textarea>
-
-    <button type="submit">Send Message</button>
-  </form>
-</section>
-
-<!-- ================= ANIMATIONS ================= -->
-
+<!-- FOOTER -->
+<footer class="reveal">
+  <h2>Racrovet Skincare</h2>
+  <p>Healthy Hair and Skin Starts With Care</p>
   
-<br>
-<br>
-<br>
-<br>
-<br>
-
-<!-- ================= FOOTER ================= -->
-<footer class = reveal>
-  <p>
-    These products are cosmetic in nature and are not intended to diagnose, treat,
-    cure, or prevent any disease. Results may vary.
-  </p>
-  
-
   <div class="footer-links">
-    <a href="#">Privacy Policy</a>
-    <a href="#">Terms of Service</a>
-    <a href="#">Refund and Return Policy</a>
-    <a href="#">Shipping Policy</a>
+    <a href="shop.html">Shop</a>
+    <a href="wholesale.html">Wholesale Inquiries</a>
+    <a href="consulting.html">Consulting</a>
+    <a href="influencer-application.html">Influencer Application</a>
   </div>
-
-  <p>© 2026 Racrovet Skincare</p>
   
-  <br>
-  <br>
-
-<p>Healthy Hair and Skin Starts With Care</p>
+  <div class="footer-links" style="margin-top: 0.5rem; opacity: 0.8; gap: 1.5rem;">
+    <a href="mailto:info@racrovetskincare.com">info@racrovetskincare.com</a>
+    <span style="display: none;">|</span>
+    <a href="mailto:wholesale@racrovetskincare.com">wholesale@racrovetskincare.com</a>
+  </div>
   
+  <p style="margin-top: 2rem; font-size: 0.8rem; opacity: 0.7;">
+    These products are cosmetic in nature and are not intended to diagnose, treat, cure, or prevent any disease. Results may vary.<br>
+    © 2026 Racrovet LLC. Columbus, Ohio, USA.
+  </p>
 </footer>
 
-<!-- ================= PRODUCT MODAL ================= -->
-<div class="modal" id="productModal">
-  <div class="modal-content">
-    <span class="close" onclick="closeModal()">&times;</span>
-    <h3 id="modalTitle"></h3>
-    <p id="modalDesc"></p>
-    <strong id="modalPrice"></strong>
-
-    <button onclick="openWhatsApp()">Order on WhatsApp</button>
-  </div>
-</div>
-
-<!-- BACK TO TOP -->
 <button id="toTop"><i class="fas fa-chevron-up"></i></button>
-
 <script src="js/script.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
