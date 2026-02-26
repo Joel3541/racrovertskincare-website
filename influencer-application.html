@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Influencer Application | Racrovet Skincare</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- INCLUDE NAVBAR HERE -->
+  <header class="navbar">
+  <a href="index.html" class="nav-left" style="text-decoration: none;">
+    <img src="assets/img/logo.jpeg" alt="Racrovet Skincare" class="logo-img" onerror="this.src='https://via.placeholder.com/50'">
+    <span class="logo-text">Racrovet</span>
+  </a>
+
+  <ul class="nav-links" id="navMenu">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="shop.html">Shop</a></li>
+    <li class="dropdown">
+      <a href="#">Body Care <i class="fas fa-caret-down"></i></a>
+      <ul class="dropdown-menu">
+        <li><a href="shop.html#body-scrubs">Body Scrubs</a></li>
+        <li><a href="shop.html#body-creams">Body Creams</a></li>
+        <li><a href="shop.html#body-oils">Body Oils</a></li>
+      </ul>
+    </li>
+    <li><a href="wholesale.html">Wholesale</a></li>
+    <li><a href="consulting.html">Consulting</a></li>
+  </ul>
+
+  <div style="display: flex; align-items: center; gap: 15px;">
+    <button id="darkToggle" class="dark-toggle" aria-label="Toggle Dark Mode">
+      <span class="icon moon">🌙</span>
+      <span class="icon sun">☀️</span>
+    </button>
+    <div class="menu-toggle" id="menuToggle">
+      <i class="fas fa-bars"></i>
+    </div>
+  </div>
+</header>
+  
+
+<section class="section reveal" style="padding-top: 8rem; max-width: 700px;">
+  <h2>Influencer Application</h2>
+  <p style="text-align: center; margin-bottom: 1rem;">
+    Racrovet Skincare partners with content creators who align with our values of intentional care, clean beauty, and authenticity.
+  </p>
+  <p style="text-align: center; margin-bottom: 3rem; color: var(--light-green); font-weight: bold;">
+    Our products are currently in production. Influencer opportunities will be available soon.
+  </p>
+
+  <p style="text-align: center; margin-bottom: 2rem;">
+    If you are interested in collaborating with Racrovet Skincare, please apply below. Approved applicants will be contacted when collaborations open. <br>
+    <em>Note: Submitting an application does not guarantee collaboration.</em>
+  </p>
+
+  <!-- Form structure -->
+  <form class="email-form" style="background: var(--bg-soft); padding: 2rem; border-radius: 12px; max-width: 100%;">
+    
+    <label>Full Name *</label>
+    <input type="text" required>
+
+    <label>Email Address *</label>
+    <input type="email" required>
+
+    <label>Social Media Platform(s) *</label>
+    <input type="text" placeholder="e.g. TikTok, Instagram" required>
+
+    <label>Social Media Handle(s) *</label>
+    <input type="text" placeholder="@yourhandle" required>
+
+    <label>Number of Followers *</label>
+    <input type="text" required>
+
+    <label>Country / Location *</label>
+    <input type="text" required>
+
+    <label>Type of Content You Create *</label>
+    <input type="text" placeholder="e.g. hair, skincare, lifestyle" required>
+
+    <label>Why do you want to collaborate with Racrovet Skincare? *</label>
+    <textarea rows="4" required></textarea>
+
+    <label>Have you worked with beauty brands before? *</label>
+    <select required style="padding: 0.9rem; border-radius: 10px; border: 1px solid #ccc; font-family: inherit;">
+      <option value="">Select an option</option>
+      <option value="Yes">Yes</option>
+      <option value="No">No</option>
+    </select>
+
+    <hr style="border: 0; height: 1px; background: #ccc; margin: 1.5rem 0;">
+
+    <label>Link to media kit (Optional)</label>
+    <input type="url" placeholder="https://...">
+
+    <label>Link to recent content you are proud of (Optional)</label>
+    <input type="url" placeholder="https://...">
+
+    <label>Anything else you would like us to know? (Optional)</label>
+    <textarea rows="3"></textarea>
+
+    <button type="button" class="btn" style="margin-top: 1rem; width: 100%;" onclick="alert('Applications are currently being saved to our waitlist database.')">Submit Application</button>
+  </form>
+</section>
+
+<!-- INCLUDE FOOTER HERE -->
+  <footer class="reveal">
+  <h2>Racrovet Skincare</h2>
+  <p>Healthy Hair and Skin Starts With Care</p>
+  
+  <div class="footer-links">
+    <a href="shop.html">Shop</a>
+    <a href="wholesale.html">Wholesale Inquiries</a>
+    <a href="consulting.html">Consulting</a>
+    <a href="influencer-application.html">Influencer Application</a>
+  </div>
+  
+  <div class="footer-links" style="margin-top: 0.5rem; opacity: 0.8; gap: 1.5rem;">
+    <a href="mailto:info@racrovetskincare.com">info@racrovetskincare.com</a>
+    <span style="display: none;">|</span>
+    <a href="mailto:wholesale@racrovetskincare.com">wholesale@racrovetskincare.com</a>
+  </div>
+  
+  <p style="margin-top: 2rem; font-size: 0.8rem; opacity: 0.7;">
+    These products are cosmetic in nature and are not intended to diagnose, treat, cure, or prevent any disease. Results may vary.<br>
+    © 2026 Racrovet LLC. Columbus, Ohio, USA.
+  </p>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
