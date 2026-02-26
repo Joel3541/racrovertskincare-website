@@ -1,6 +1,6 @@
 // --- START OF FILE script.js ---
 
-// 1. DARK MODE TOGGLE
+// 1. DARK MODE
 const darkToggle = document.getElementById("darkToggle");
 if (localStorage.getItem("darkMode") === "enabled") {
   document.body.classList.add("dark");
@@ -15,54 +15,90 @@ darkToggle.addEventListener("click", () => {
   }
 });
 
-// 2. MOBILE MENU TOGGLE
+// 2. WHATSAPP
+function openWhatsApp() {
+  window.open("https://wa.me/+12674563836", "_blank");
+}
+
+// 3. BACK TO TOP (Fixed to smoothly appear/disappear on scroll)
+const toTop = document.getElementById("toTop");
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 300) {
+    toTop.style.display = "block";
+  } else {
+    toTop.style.display = "none";
+  }
+});
+toTop.onclick = () => window.scrollTo({ top: 0, behavior: "smooth" });
+
+// 4. MOBILE MENU
 const menuToggle = document.getElementById("menuToggle");
 const navMenu = document.getElementById("navMenu");
-
 menuToggle.addEventListener("click", () => {
-  navMenu.classList.toggle("active");
+  navMenu.style.display = navMenu.style.display === "flex" ? "none" : "flex";
 });
 
-// Mobile Dropdown Toggle
+// NAVBAR DROPDOWN FOR MOBILE
 document.querySelectorAll(".dropdown > a").forEach(link => {
   link.addEventListener("click", e => {
     if (window.innerWidth <= 768) {
       e.preventDefault();
-      const dropdownMenu = link.nextElementSibling;
-      dropdownMenu.style.display = dropdownMenu.style.display === "flex" ? "none" : "flex";
+      link.nextElementSibling.classList.toggle("open");
     }
   });
 });
 
-// 3. SCROLL ANIMATIONS (Intersection Observer)
+// 5. MODAL (Fixed to use CSS class instead of inline style to prevent layout bugs)
+const modal = document.getElementById("productModal");
+
+// Attach to window so HTML 'onclick' can find them
+window.openModal = function(title, desc, price) {
+  document.getElementById("modalTitle").innerText = title;
+  document.getElementById("modalDesc").innerText = desc;
+  document.getElementById("modalPrice").innerText = price;
+  modal.classList.add("active");
+};
+
+window.closeModal = function() {
+  modal.classList.remove("active");
+};
+
+// Close modal if user clicks anywhere outside of the white box
+window.addEventListener("click", (e) => {
+  if (e.target === modal) {
+    closeModal();
+  }
+});
+
+// 6. ANIMATIONS SCRIPT
 const reveals = document.querySelectorAll(".reveal");
 const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("active");
-      observer.unobserve(entry.target);
-    }
-  });
-}, { threshold: 0.15 });
-
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("active");
+        observer.unobserve(entry.target); // animate only once
+      }
+    });
+  },
+  { threshold: 0.15 }
+);
 reveals.forEach(reveal => observer.observe(reveal));
 
-// 4. "COMING SOON" MODE LOGIC
-// Set to false when products are ready to sell
-const COMING_SOON = true; 
-
+// 7. CHECKOUT + HIDE PRICES (Coming Soon Logic)
 document.addEventListener("DOMContentLoaded", () => {
+  const COMING_SOON = true;
+
   if (COMING_SOON) {
     // Hide standard prices and cart buttons
     document.querySelectorAll(".price, .add-to-cart").forEach(el => {
       el.style.display = "none";
     });
-    // Show notify/waitlist buttons
+    // Show waitlist / notify buttons
     document.querySelectorAll(".notify-btn").forEach(el => {
-      el.style.display = "inline-block";
+      el.style.display = "flex"; // keeps flex/block properties stable
     });
   } else {
-    // Hide waitlist buttons if live
+    // Hide waitlist buttons if site is fully Live
     document.querySelectorAll(".notify-btn").forEach(el => {
       el.style.display = "none";
     });
