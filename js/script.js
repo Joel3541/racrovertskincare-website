@@ -1,130 +1,70 @@
-// DARK MODE
-const darkToggle = document.getElementById("darkToggle");
+// --- START OF FILE script.js ---
 
-// Load saved preference
-if (localStorage.getItem("darkMode") === "enabled") 
-{
+// 1. DARK MODE TOGGLE
+const darkToggle = document.getElementById("darkToggle");
+if (localStorage.getItem("darkMode") === "enabled") {
   document.body.classList.add("dark");
 }
 
-darkToggle.addEventListener("click", () => 
-  {
+darkToggle.addEventListener("click", () => {
   document.body.classList.toggle("dark");
-
-  if (document.body.classList.contains("dark")) 
-  {
+  if (document.body.classList.contains("dark")) {
     localStorage.setItem("darkMode", "enabled");
-  } else 
-  {
+  } else {
     localStorage.setItem("darkMode", "disabled");
   }
 });
 
-
-// WHATSAPP
-function openWhatsApp() 
-{
-  window.open(
-    "https://wa.me/+12674563836"
-  );
-}
-
-// BACK TO TOP
-const toTop = document.getElementById("toTop");
-
-window.addEventListener("scroll", () => 
-  {
-  toTop.style.display = window.scrollY > 300 ? "block" : "none";
-});
-
-toTop.onclick = () => window.scrollTo({ top: 0, behavior: "smooth" });
-
-// MOBILE MENU
+// 2. MOBILE MENU TOGGLE
 const menuToggle = document.getElementById("menuToggle");
 const navMenu = document.getElementById("navMenu");
 
-menuToggle.addEventListener("click", () => 
-  {
-  navMenu.style.display =
-    navMenu.style.display === "flex" ? "none" : "flex";
+menuToggle.addEventListener("click", () => {
+  navMenu.classList.toggle("active");
 });
 
-
-// MODAL
-const modal = document.getElementById("productModal");
-
-function openModal(title, desc, price) 
-{
-  document.getElementById("modalTitle").innerText = title;
-  document.getElementById("modalDesc").innerText = desc;
-  document.getElementById("modalPrice").innerText = price;
-  modal.style.display = "flex";
-}
-
-function closeModal() 
-{
-  modal.style.display = "none";
-}
-
-
-// ANIMATIONS SCRIPT
-const reveals = document.querySelectorAll(".reveal");
-
-const observer = new IntersectionObserver(
-  (entries) => 
-    {
-    entries.forEach(entry => 
-      {
-      if (entry.isIntersecting) 
-      {
-        entry.target.classList.add("active");
-        observer.unobserve(entry.target); // animate once
-      }
-    });
-  },
-  {
-    threshold: 0.15, // reveal when 15% visible
-  }
-);
-
-reveals.forEach(reveal => observer.observe(reveal));
-
-
-
-//CHECKOUT + HIDE PRICES
-const COMING_SOON = true;
-
-if (COMING_SOON) 
-{
-  document.querySelectorAll(".price, .add-to-cart").forEach(el => 
-    {
-    el.style.display = "none";
-  });
-}
-
-
-//NAVBAR MODIFICATION
-document.querySelectorAll(".dropdown > a").forEach(link => 
-  {
-  link.addEventListener("click", e => 
-    {
-    if (window.innerWidth <= 768) 
-    {
+// Mobile Dropdown Toggle
+document.querySelectorAll(".dropdown > a").forEach(link => {
+  link.addEventListener("click", e => {
+    if (window.innerWidth <= 768) {
       e.preventDefault();
-      link.nextElementSibling.classList.toggle("open");
+      const dropdownMenu = link.nextElementSibling;
+      dropdownMenu.style.display = dropdownMenu.style.display === "flex" ? "none" : "flex";
     }
   });
 });
 
+// 3. SCROLL ANIMATIONS (Intersection Observer)
+const reveals = document.querySelectorAll(".reveal");
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("active");
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.15 });
 
+reveals.forEach(reveal => observer.observe(reveal));
 
+// 4. "COMING SOON" MODE LOGIC
+// Set to false when products are ready to sell
+const COMING_SOON = true; 
 
-
-
-
-
-
-
-
-
-
+document.addEventListener("DOMContentLoaded", () => {
+  if (COMING_SOON) {
+    // Hide standard prices and cart buttons
+    document.querySelectorAll(".price, .add-to-cart").forEach(el => {
+      el.style.display = "none";
+    });
+    // Show notify/waitlist buttons
+    document.querySelectorAll(".notify-btn").forEach(el => {
+      el.style.display = "inline-block";
+    });
+  } else {
+    // Hide waitlist buttons if live
+    document.querySelectorAll(".notify-btn").forEach(el => {
+      el.style.display = "none";
+    });
+  }
+});
