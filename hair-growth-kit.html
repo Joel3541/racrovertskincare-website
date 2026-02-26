@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hair Growth Essentials Kit | Racrovet Skincare</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- INCLUDE NAVBAR HERE -->
+  <header class="navbar">
+  <a href="index.html" class="nav-left" style="text-decoration: none;">
+    <img src="assets/img/logo.jpeg" alt="Racrovet Skincare" class="logo-img" onerror="this.src='https://via.placeholder.com/50'">
+    <span class="logo-text">Racrovet</span>
+  </a>
+
+  <ul class="nav-links" id="navMenu">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="shop.html">Shop</a></li>
+    <li class="dropdown">
+      <a href="#">Body Care <i class="fas fa-caret-down"></i></a>
+      <ul class="dropdown-menu">
+        <li><a href="shop.html#body-scrubs">Body Scrubs</a></li>
+        <li><a href="shop.html#body-creams">Body Creams</a></li>
+        <li><a href="shop.html#body-oils">Body Oils</a></li>
+      </ul>
+    </li>
+    <li><a href="wholesale.html">Wholesale</a></li>
+    <li><a href="consulting.html">Consulting</a></li>
+  </ul>
+
+  <div style="display: flex; align-items: center; gap: 15px;">
+    <button id="darkToggle" class="dark-toggle" aria-label="Toggle Dark Mode">
+      <span class="icon moon">🌙</span>
+      <span class="icon sun">☀️</span>
+    </button>
+    <div class="menu-toggle" id="menuToggle">
+      <i class="fas fa-bars"></i>
+    </div>
+  </div>
+</header>
+
+<section class="section reveal" style="padding-top: 8rem; display: flex; flex-wrap: wrap; gap: 3rem;">
+  
+  <div style="flex: 1; min-width: 300px;">
+    <img src="assets/img/hair-growth-kit.jpg" alt="Hair Growth Essentials Kit" style="width: 100%; border-radius: 12px;" onerror="this.src='https://via.placeholder.com/600'">
+  </div>
+
+  <div style="flex: 1; min-width: 300px; display: flex; flex-direction: column; justify-content: center;">
+    <h2 style="text-align: left; margin-bottom: 0.5rem;">Hair Growth Essentials Kit</h2>
+    <p class="price" style="font-size: 1.5rem; color: var(--light-green); margin-bottom: 1.5rem;">$62.00</p>
+    
+    <p><strong>SKU:</strong> RAC-HGK-001</p>
+    <p style="margin-bottom: 1.5rem;">This complete 3-step hair growth system hydrates the scalp, strengthens roots, and helps retain length.</p>
+    
+    <ul style="margin-left: 1.5rem; margin-bottom: 1.5rem; line-height: 1.8;">
+      <li><strong>What’s Inside:</strong> Ginger & Cloves Hair Oil (100 ml), Hair Butter (236 ml), Hair Growth Spray / Tonic (236 ml).</li>
+      <li><strong>How to Use:</strong> Spray &rarr; Oil &rarr; Butter</li>
+      <li><strong>Best For:</strong> Dry or itchy scalp • Protective styles • Growth routines.</li>
+    </ul>
+
+    <button class="btn add-to-cart" style="align-self: flex-start;">Add to Cart - $62.00</button>
+    
+    <!-- Waitlist Replacement Button -->
+    <div class="coming-soon-banner notify-btn" style="padding: 1.5rem; margin: 0; text-align: left;">
+      <p style="margin-bottom: 1rem;"><strong>Currently in Production.</strong> Sign up to be notified when we launch.</p>
+      <form style="display: flex; gap: 0.5rem;">
+        <input type="email" placeholder="Email address" required style="padding: 0.8rem; border-radius: 6px; border: 1px solid #ccc; flex: 1;">
+        <button type="submit" class="btn">Notify Me</button>
+      </form>
+    </div>
+
+  </div>
+</section>
+
+<!-- INCLUDE FOOTER HERE -->
+<footer class="reveal">
+  <h2>Racrovet Skincare</h2>
+  <p>Healthy Hair and Skin Starts With Care</p>
+  
+  <div class="footer-links">
+    <a href="shop.html">Shop</a>
+    <a href="wholesale.html">Wholesale Inquiries</a>
+    <a href="consulting.html">Consulting</a>
+    <a href="influencer-application.html">Influencer Application</a>
+  </div>
+  
+  <div class="footer-links" style="margin-top: 0.5rem; opacity: 0.8; gap: 1.5rem;">
+    <a href="mailto:info@racrovetskincare.com">info@racrovetskincare.com</a>
+    <span style="display: none;">|</span>
+    <a href="mailto:wholesale@racrovetskincare.com">wholesale@racrovetskincare.com</a>
+  </div>
+  
+  <p style="margin-top: 2rem; font-size: 0.8rem; opacity: 0.7;">
+    These products are cosmetic in nature and are not intended to diagnose, treat, cure, or prevent any disease. Results may vary.<br>
+    © 2026 Racrovet LLC. Columbus, Ohio, USA.
+  </p>
+</footer>
+  
+
+<script src="js/script.js"></script>
+</body>
+</html>
