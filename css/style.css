@@ -48,6 +48,89 @@ body.dark .btn
 }
 
 
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+/* Base button improvements */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.9rem 2rem;
+  border-radius: 40px;
+  font-weight: 500;
+  transition: all 0.25s ease;
+  text-align: center;
+}
+
+/* PRIMARY CTA */
+.primary-btn {
+  background: var(--green);
+  color: #fff;
+}
+
+.primary-btn:hover {
+  background: var(--light-green);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 18px rgba(0,0,0,0.15);
+}
+
+/* SECONDARY CTA */
+.secondary-btn {
+  background: transparent;
+  border: 2px solid var(--green);
+  color: var(--green);
+}
+
+.secondary-btn:hover {
+  background: var(--green);
+  color: #fff;
+}
+
+/* OUTLINE BUTTON */
+.outline-btn {
+  background: transparent;
+  border: 2px solid #ddd;
+  color: #444;
+}
+
+.outline-btn:hover {
+  background: #eee;
+}
+
+
+body.dark .secondary-btn {
+  border-color: #9BC59D;
+  color: #9BC59D;
+}
+
+body.dark .secondary-btn:hover {
+  background: #9BC59D;
+  color: #121212;
+}
+
+body.dark .outline-btn {
+  border-color: #444;
+  color: #ddd;
+}
+
+body.dark .outline-btn:hover {
+  background: #2a2a2a;
+}
+
+
+.btn:active
+{
+transform:scale(0.96);
+}
+
+
+
 body.dark .bg-light { background: #1b1b1b; }
 body.dark .product-card, body.dark .step-box { background: #1e1e1e; }
 body.dark footer { background: #0f0f0f; }
@@ -233,3 +316,25 @@ body.dark .dark-toggle .sun { transform: translateY(0); opacity: 1; }
   body.dark .dropdown-menu { background: transparent; }
   .hero h1 { font-size: 2.2rem; }
 }
+
+
+@media (max-width:768px){
+
+.hero-buttons{
+flex-direction:column;
+align-items:center;
+}
+
+.hero-buttons .btn{
+width:100%;
+max-width:280px;
+}
+
+}
+
+
+
+
+
+
+
