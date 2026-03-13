@@ -571,6 +571,220 @@ body.dark .consult-card hr {
 }
 
 
+/* =======================================================
+   SHOP & WHOLESALE PAGE STYLES (Matches Image Inspiration)
+======================================================= */
+
+.luxury-page-body {
+  background-color: #F8F6F0; /* Soft warm cream from the image */
+}
+
+/* 1. Dark Green Square Buttons */
+.forest-btn {
+  background-color: #2A4032 !important; /* Deep forest green */
+  color: #fff !important;
+  border-radius: 0 !important; /* Sharp square corners */
+  padding: 0.8rem 2.5rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 0.9rem;
+  text-decoration: none;
+  border: 1px solid #2A4032;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+}
+.forest-btn:hover {
+  background-color: #1e2e24 !important;
+  color: #fff !important;
+}
+.forest-btn-outline {
+  background-color: transparent !important;
+  color: #2A4032 !important;
+  border: 1px solid #2A4032 !important;
+}
+.forest-btn-outline:hover {
+  background-color: #2A4032 !important;
+  color: #fff !important;
+}
+
+/* 2. Lined Subtitles (e.g. "--- Best Sellers ---") */
+.lined-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem;
+  color: #2A4032;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+.lined-title::before, 
+.lined-title::after {
+  content: '';
+  height: 1px;
+  background-color: #D5D0C8; /* Muted gray line */
+  flex: 1;
+  max-width: 80px;
+  margin: 0 20px;
+}
+.subtitle-lines {
+  display: flex;
+  align-items: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  color: #555;
+  text-transform: uppercase;
+}
+.subtitle-lines::before, 
+.subtitle-lines::after {
+  content: '';
+  height: 1px;
+  background-color: #555;
+  flex: 1;
+  max-width: 40px;
+  margin: 0 10px;
+}
+
+/* 3. Luxury Hero Banner */
+.luxury-hero {
+  background: url("../assets/img/hero.jpg") center/cover no-repeat; /* Replace with your wide box image */
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  padding: 8rem 2rem 4rem;
+}
+.luxury-hero-content {
+  max-width: 500px;
+  margin-left: 5%; /* Pushes text to left slightly like the image */
+}
+.luxury-hero-content h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.5rem;
+  color: #2A4032; /* Dark green text */
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+/* 4. Luxury 4-Column Product Grid */
+.luxury-product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Forces 4 columns on desktop */
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.luxury-card {
+  text-align: center;
+  background: transparent;
+}
+.luxury-card .img-wrapper {
+  background-color: transparent;
+  width: 100%;
+  aspect-ratio: 1 / 1; /* Perfect squares */
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+.luxury-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+.luxury-card:hover img {
+  transform: scale(1.03);
+}
+.luxury-card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+.luxury-card .price {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.95rem;
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+/* 5. Split Lifestyle Image Section */
+.luxury-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  max-width: 100%;
+  padding: 0;
+}
+.luxury-split img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  min-height: 400px;
+  display: block;
+}
+
+/* 6. Inline Email Form (Join Community) */
+.inline-newsletter-form {
+  display: flex;
+  justify-content: center;
+  max-width: 500px;
+  margin: 0 auto;
+  gap: 0;
+}
+.inline-newsletter-form input {
+  flex: 1;
+  padding: 0.9rem 1.5rem;
+  border: 1px solid #D5D0C8;
+  border-right: none;
+  font-family: 'Montserrat', sans-serif;
+  border-radius: 0; /* Square edges */
+  outline: none;
+  background: transparent;
+}
+.inline-newsletter-form .forest-btn {
+  margin: 0; /* Remove default margin */
+}
+
+/* Dark Mode Exceptions */
+body.dark.luxury-page-body {
+  background-color: #121212;
+}
+body.dark .lined-title, 
+body.dark .luxury-hero-content h1, 
+body.dark .luxury-card h3 {
+  color: #fff;
+}
+body.dark .inline-newsletter-form input {
+  color: #fff;
+}
+
+/* Mobile Responsiveness for 4-Column Grid */
+@media (max-width: 1024px) {
+  .luxury-product-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */
+  }
+}
+@media (max-width: 600px) {
+  .luxury-product-grid {
+    grid-template-columns: 1fr; /* 1 column on mobile */
+  }
+  .luxury-split {
+    grid-template-columns: 1fr;
+  }
+  .inline-newsletter-form {
+    flex-direction: column;
+  }
+  .inline-newsletter-form input {
+    border-right: 1px solid #D5D0C8;
+    margin-bottom: 1rem;
+  }
+}
+
+
+
 
 
 
