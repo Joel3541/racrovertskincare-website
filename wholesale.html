@@ -3,20 +3,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Wholesale Inquiries | Racrovet Skincare</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+  <title>Wholesale | Racrovet Skincare</title>
+  <link rel="icon" type="image/x-icon" href="assets/img/logo.jpeg">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="luxury-page-body">
 
-<!-- NAVBAR HERE -->
-  <header class="navbar">
+<!-- NAVBAR -->
+<header class="navbar">
   <a href="index.html" class="nav-left" style="text-decoration: none;">
     <img src="assets/img/logo.jpeg" alt="Racrovet Skincare" class="logo-img" onerror="this.src='https://via.placeholder.com/50'">
     <span class="logo-text"></span>
   </a>
-
   <ul class="nav-links" id="navMenu">
     <li><a href="index.html">Home</a></li>
     <li><a href="shop.html">Shop</a></li>
@@ -31,7 +31,6 @@
     <li><a href="wholesale.html">Wholesale</a></li>
     <li><a href="consulting.html">Consulting</a></li>
   </ul>
-
   <div style="display: flex; align-items: center; gap: 15px;">
     <button id="darkToggle" class="dark-toggle" aria-label="Toggle Dark Mode">
       <span class="icon moon">🌙</span>
@@ -42,46 +41,62 @@
     </div>
   </div>
 </header>
-  
 
-<section class="section reveal" style="padding-top: 8rem; max-width: 800px; text-align: center;">
-  <h2>Wholesale Inquiries</h2>
-  
-  <p style="font-size: 1.1rem; margin-top: 2rem;">
-    Racrovet Skincare is a clean beauty brand focused on intentional care for hair and skin. 
-    Our products are currently in production and preparing for retail distribution.
-  </p>
-  
-  <div class="step-box" style="margin: 3rem 0; background: var(--bg-soft);">
-    <h3 style="color: var(--light-green);">Wholesale Opportunities Available Soon</h3>
-    <p>If you are a boutique, salon, or retailer interested in carrying Racrovet Skincare, please contact us to be notified when wholesale ordering opens.</p>
-    <br>
-    <p><strong>Email:</strong> <a href="mailto:wholesale@racrovetskincare.com" style="color: var(--green);">wholesale@racrovetskincare.com</a></p>
-    <p><strong>Location:</strong> Columbus, Ohio, USA</p>
+<!-- LUXURY HERO -->
+<section class="luxury-hero reveal" style="background: url('assets/img/wholesale-hero.jpg') center/cover; min-height: 50vh;">
+  <div class="luxury-hero-content" style="background: rgba(248,246,240,0.85); padding: 3rem; max-width: 600px;">
+    <h1>Wholesale Partnerships</h1>
+    <div class="subtitle-lines"><span>PREMIUM BOTANICAL CARE</span></div>
+    <p style="font-family: 'Montserrat', sans-serif; color: #333; margin-top: 1.5rem; line-height: 1.6;">
+      Partner with Racrovet Skincare for scalp-focused hair care and botanical body care that performs for your growth-focused clients.
+    </p>
   </div>
-
-  <p style="font-size: 0.9rem; opacity: 0.8;">
-    Wholesale pricing, minimum order quantities, and ordering details will be shared upon availability.
-  </p>
 </section>
 
-<!-- FOOTER HERE -->
-  <footer class="reveal">
-  <p>These products are cosmetic in nature and are not intended to diagnose, treat, cure, or prevent any disease. Results may vary.</p>
+<!-- WHOLESALE DETAILS -->
+<section class="section luxury-section reveal">
+  <div class="lined-title">Wholesale Overview</div>
   
-  <div class="footer-links">
-    <a href="#">Privacy Policy</a>
-    <a href="#">Terms of Service</a>
-    <a href="#">Refund and Return Policy</a>
-    <a href="#">Shipping Policy</a>
+  <div class="steps-container" style="gap: 1rem;">
+    <div class="step-box" style="background: transparent; border: 1px solid #D5D0C8; border-radius: 0;">
+      <h3 style="color: #2A4032; font-family: 'Playfair Display', serif;">Minimum Order</h3>
+      <p>MOQ: $300 opening order.</p>
+    </div>
+    <div class="step-box" style="background: transparent; border: 1px solid #D5D0C8; border-radius: 0;">
+      <h3 style="color: #2A4032; font-family: 'Playfair Display', serif;">Pricing Terms</h3>
+      <p>50% of suggested retail (Keystone). Prepaid only.</p>
+    </div>
+    <div class="step-box" style="background: transparent; border: 1px solid #D5D0C8; border-radius: 0;">
+      <h3 style="color: #2A4032; font-family: 'Playfair Display', serif;">Availability</h3>
+      <p>Currently in production. Soft opening soon.</p>
+    </div>
   </div>
-  <p>© 2026 Racrovet Skincare <br><br> Healthy Hair and Skin Starts With Care</p>
+</section>
+
+<!-- INQUIRY FORM -->
+<section class="section luxury-section reveal" style="padding-bottom: 6rem;">
+  <div class="lined-title">Submit an Inquiry</div>
+  <p style="text-align: center; max-width: 600px; margin: 0 auto 2rem;">If you are a boutique, salon, or retailer interested in carrying Racrovet Skincare, enter your email below to be notified when ordering opens.</p>
+  
+  <form class="inline-newsletter-form" action="mailto:wholesale@racrovetskincare.com" method="POST" enctype="text/plain">
+    <input type="email" name="email" placeholder="Retailer Email Address" required>
+    <button type="submit" class="forest-btn">Apply Now</button>
+  </form>
+</section>
+
+<!-- FOOTER -->
+<footer class="reveal">
+  <div class="footer-links">
+    <a href="shop.html">Shop</a>
+    <a href="wholesale.html">Wholesale Inquiries</a>
+    <a href="consulting.html">Consulting</a>
+  </div>
+  <p>© 2026 Racrovet Skincare</p>
 </footer>
 
 <!-- BACK TO TOP -->
 <button id="toTop"><i class="fas fa-chevron-up"></i></button>
-  
+
 <script src="js/script.js"></script>
-  
 </body>
 </html>
