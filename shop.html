@@ -1,24 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Racrovet Skincare | Shop</title>
+  <title>Shop | Racrovet Skincare</title>
   <link rel="icon" type="image/x-icon" href="assets/img/logo.jpeg">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="luxury-page-body">
 
-<!-- NAVBAR HERE -->
-  <header class="navbar">
+<!-- NAVBAR -->
+<header class="navbar">
   <a href="index.html" class="nav-left" style="text-decoration: none;">
     <img src="assets/img/logo.jpeg" alt="Racrovet Skincare" class="logo-img" onerror="this.src='https://via.placeholder.com/50'">
     <span class="logo-text"></span>
   </a>
-
   <ul class="nav-links" id="navMenu">
     <li><a href="index.html">Home</a></li>
     <li><a href="shop.html">Shop</a></li>
@@ -33,7 +31,6 @@
     <li><a href="wholesale.html">Wholesale</a></li>
     <li><a href="consulting.html">Consulting</a></li>
   </ul>
-
   <div style="display: flex; align-items: center; gap: 15px;">
     <button id="darkToggle" class="dark-toggle" aria-label="Toggle Dark Mode">
       <span class="icon moon">🌙</span>
@@ -45,59 +42,104 @@
   </div>
 </header>
 
-<section class="section reveal" style="padding-top: 8rem;">
-  <h2>Explore Scalp-Focused Care</h2>
-  <p style="text-align: center; margin-bottom: 3rem;">Designed to support healthy hair growth through simple, consistent routines.</p>
-
-  <div class="product-grid">
-    
-    <!-- Featured First -->
-    <a href="hair-growth-kit.html" class="product-card" style="text-decoration: none; color: inherit;">
-      <img src="assets/img/hair-growth-kit.jpg" alt="Hair Growth Essentials Kit" onerror="this.src='https://via.placeholder.com/300'">
-      <h3>Hair Growth Essentials Kit</h3>
-      <p>Spray • Oil • Seal</p>
-      <span class="price">$62.00</span>
-      <button class="btn notify-btn" style="margin-top: 1rem; width: 100%;">Coming Soon</button>
-    </a>
-
-    <!-- Body Care Options -->
-    <div class="product-card" id="body-scrubs">
-      <img src="assets/img/lavender-scrub.jpg" alt="Lavender Body Scrub" onerror="this.src='https://via.placeholder.com/300'">
-      <h3>Lavender Body Scrub</h3>
-      <p>Gentle exfoliating polish.</p>
-      <span class="price">$22.00</span>
-      <button class="btn notify-btn" style="margin-top: 1rem; width: 100%;">Coming Soon</button>
-    </div>
-
-    <div class="product-card" id="body-creams">
-      <img src="assets/img/pink-sugar-cream.jpg" alt="Pink Sugar Body Cream" onerror="this.src='https://via.placeholder.com/300'">
-      <h3>Pink Sugar Body Cream</h3>
-      <p>Deeply hydrating body butter.</p>
-      <span class="price">$24.00</span>
-      <button class="btn notify-btn" style="margin-top: 1rem; width: 100%;">Coming Soon</button>
+<!-- LUXURY HERO -->
+<section class="luxury-hero reveal">
+  <div class="luxury-hero-content">
+    <h1>Healthy Hair Ritual</h1>
+    <div class="subtitle-lines"><span>SCALP-FOCUSED CARE</span></div>
+    <div class="hero-btn-group" style="justify-content: flex-start; margin-top: 1.5rem;">
+      <a href="#best-sellers" class="forest-btn">Shop Now</a>
+      <a href="index.html#about" class="forest-btn forest-btn-outline">Our Story</a>
     </div>
   </div>
 </section>
 
-    
-
-<!-- FOOTER HERE -->
-  <footer class="reveal">
-  <p>These products are cosmetic in nature and are not intended to diagnose, treat, cure, or prevent any disease. Results may vary.</p>
+<!-- BEST SELLERS GRID (Matches Image) -->
+<section id="best-sellers" class="section luxury-section reveal">
+  <div class="lined-title">Best Sellers</div>
   
+  <div class="luxury-product-grid">
+    <!-- Product 1 -->
+    <div class="luxury-card">
+      <div class="img-wrapper">
+        <img src="assets/img/hair-growth-kit.jpg" alt="Hair Growth Essentials Kit" onerror="this.src='https://via.placeholder.com/300'">
+      </div>
+      <h3>Hair Growth Kit</h3>
+      <p class="price">$62.00</p>
+      <!-- Buttons swap automatically via JS COMING_SOON variable -->
+      <button class="forest-btn add-to-cart" onclick="openWhatsApp()">Add to Cart</button>
+      <button class="forest-btn notify-btn" onclick="window.location.href='index.html#waitlist'" style="display:none; width:100%;">Coming Soon</button>
+    </div>
+
+    <!-- Product 2 -->
+    <div class="luxury-card" id="body-scrubs">
+      <div class="img-wrapper">
+        <img src="assets/img/lavender-scrub.jpg" alt="Lavender Body Scrub" onerror="this.src='https://via.placeholder.com/300'">
+      </div>
+      <h3>Lavender Body Scrub</h3>
+      <p class="price">$22.00</p>
+      <button class="forest-btn add-to-cart" onclick="openWhatsApp()">Add to Cart</button>
+      <button class="forest-btn notify-btn" onclick="window.location.href='index.html#waitlist'" style="display:none; width:100%;">Coming Soon</button>
+    </div>
+
+    <!-- Product 3 -->
+    <div class="luxury-card" id="body-creams">
+      <div class="img-wrapper">
+        <img src="assets/img/pink-sugar-cream.jpg" alt="Pink Sugar Body Cream" onerror="this.src='https://via.placeholder.com/300'">
+      </div>
+      <h3>Pink Sugar Body Cream</h3>
+      <p class="price">$24.00</p>
+      <button class="forest-btn add-to-cart" onclick="openWhatsApp()">Add to Cart</button>
+      <button class="forest-btn notify-btn" onclick="window.location.href='index.html#waitlist'" style="display:none; width:100%;">Coming Soon</button>
+    </div>
+
+    <!-- Product 4 -->
+    <div class="luxury-card" id="body-oils">
+      <div class="img-wrapper">
+        <img src="assets/img/hair growth oil.jpeg" alt="Ginger & Cloves Hair Oil" onerror="this.src='https://via.placeholder.com/300'">
+      </div>
+      <h3>Ginger & Cloves Oil</h3>
+      <p class="price">$18.00</p>
+      <button class="forest-btn add-to-cart" onclick="openWhatsApp()">Add to Cart</button>
+      <button class="forest-btn notify-btn" onclick="window.location.href='index.html#waitlist'" style="display:none; width:100%;">Coming Soon</button>
+    </div>
+  </div>
+</section>
+
+<!-- SPLIT LIFESTYLE SECTION (Matches image with woman/ingredients) -->
+<section class="luxury-split section reveal">
+  <div class="split-image-left">
+    <img src="assets/img/ingredients.jpg" alt="Botanical Ingredients" onerror="this.src='https://via.placeholder.com/600x400'">
+  </div>
+  <div class="split-image-right">
+    <img src="assets/img/model.jpg" alt="Healthy Hair Model" onerror="this.src='https://via.placeholder.com/600x400'">
+  </div>
+</section>
+
+<!-- INLINE NEWSLETTER (Matches "Join Community" section) -->
+<section class="section luxury-section reveal" style="padding-bottom: 6rem;">
+  <div class="lined-title">Join Racrovet Community</div>
+  <form class="inline-newsletter-form" action="mailto:info@racrovetskincare.com" method="POST" enctype="text/plain">
+    <input type="email" name="email" placeholder="Enter email" required>
+    <button type="submit" class="forest-btn">Subscribe</button>
+  </form>
+</section>
+
+<!-- FOOTER -->
+<footer class="reveal">
+  <p>These products are cosmetic in nature and are not intended to diagnose, treat, cure, or prevent any disease. Results may vary.</p>
   <div class="footer-links">
-    <a href="#">Privacy Policy</a>
-    <a href="#">Terms of Service</a>
-    <a href="#">Refund and Return Policy</a>
-    <a href="#">Shipping Policy</a>
+    <a href="shop.html">Shop</a>
+    <a href="wholesale.html">Wholesale Inquiries</a>
+    <a href="consulting.html">Consulting</a>
+    <a href="influencer-application.html">Influencer Application</a>
   </div>
   <p>© 2026 Racrovet Skincare <br><br> Healthy Hair and Skin Starts With Care</p>
 </footer>
 
-<script src="js/script.js"></script>
-  
 <!-- BACK TO TOP -->
 <button id="toTop"><i class="fas fa-chevron-up"></i></button>
-  
+
+<script src="js/script.js"></script>
 </body>
 </html>
