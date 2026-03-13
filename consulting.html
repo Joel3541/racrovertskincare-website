@@ -3,20 +3,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Consulting Services | Racrovet Skincare</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+  <title>Consulting | Racrovet Skincare</title>
+  <link rel="icon" type="image/x-icon" href="assets/img/logo.jpeg">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="consulting-page-body">
 
-<!-- NAVBAR HERE -->
-  <header class="navbar">
+<!-- NAVBAR (Same as the rest of the site) -->
+<header class="navbar">
   <a href="index.html" class="nav-left" style="text-decoration: none;">
     <img src="assets/img/logo.jpeg" alt="Racrovet Skincare" class="logo-img" onerror="this.src='https://via.placeholder.com/50'">
     <span class="logo-text"></span>
   </a>
-
   <ul class="nav-links" id="navMenu">
     <li><a href="index.html">Home</a></li>
     <li><a href="shop.html">Shop</a></li>
@@ -31,7 +31,6 @@
     <li><a href="wholesale.html">Wholesale</a></li>
     <li><a href="consulting.html">Consulting</a></li>
   </ul>
-
   <div style="display: flex; align-items: center; gap: 15px;">
     <button id="darkToggle" class="dark-toggle" aria-label="Toggle Dark Mode">
       <span class="icon moon">🌙</span>
@@ -42,56 +41,103 @@
     </div>
   </div>
 </header>
-  
 
-<section class="section reveal" style="padding-top: 8rem; max-width: 900px;">
-  <h2>Beauty and Skincare Business Consulting</h2>
-  <p style="text-align: center; margin-bottom: 3rem; font-size: 1.1rem;">Partnering with founders for compliant, retail-ready skincare brands.</p>
-
-  <div class="steps-container">
-    <div class="step-box">
-      <h3>Strategy Session</h3>
-      <p style="font-size: 1.2rem; font-weight: bold; margin-bottom: 1rem; color: var(--light-green);">$175</p>
-      <p>1-on-1 consultation for founders to plan a compliant, professional launch strategy.</p>
-    </div>
-    
-    <div class="step-box">
-      <h3>Label and Compliance Audit</h3>
-      <p style="font-size: 1.2rem; font-weight: bold; margin-bottom: 1rem; color: var(--light-green);">$450</p>
-      <p>Review of INCI accuracy, medical claims review, and packaging standard checks.</p>
-    </div>
-
-    <div class="step-box">
-      <h3>Full Launch Package</h3>
-      <p style="font-size: 1.2rem; font-weight: bold; margin-bottom: 1rem; color: var(--light-green);">$1,250</p>
-      <p>Comprehensive professional consulting for total retail readiness and label compliance.</p>
+<!-- HERO SECTION -->
+<section class="consulting-hero section reveal">
+  <div class="hero-text-col">
+    <h1>Carefully Made Skincare <br>& Business Consulting</h1>
+    <p>Luxury botanical skincare products and professional consulting for entrepreneurs building successful brands.</p>
+    <div class="hero-btn-group">
+      <a href="shop.html" class="consult-btn pink-btn">Shop Skincare</a>
+      <a href="mailto:consulting@racrovetskincare.com" class="consult-btn olive-btn">Book Consulting</a>
     </div>
   </div>
-
-  <div style="text-align: center; margin-top: 4rem;">
-    <h3>Book a Consultation</h3>
-    <p>Ready to build a compliant brand? Email us to secure your spot.</p>
-    <a href="mailto:consulting@racrovetskincare.com" class="btn" style="margin-top: 1rem;">consulting@racrovetskincare.com</a>
+  <div class="hero-img-col">
+    <!-- Place a beautiful product/consulting image here -->
+    <img src="assets/img/consulting-hero.jpg" alt="Racrovet Consulting and Skincare" onerror="this.src='https://via.placeholder.com/600x500'">
   </div>
-
 </section>
 
-
-<!-- INCLUDE FOOTER HERE -->
-
-  <footer class="reveal">
-  <p>These products are cosmetic in nature and are not intended to diagnose, treat, cure, or prevent any disease. Results may vary.</p>
+<!-- SERVICES GRID (Designed like the "Best Sellers" section) -->
+<section id="services" class="consulting-grid-section section bg-light reveal">
+  <h2>Consulting Services</h2>
   
+  <div class="consulting-grid">
+    <!-- Card 1 -->
+    <div class="consult-card">
+      <div class="consult-img-box">
+        <img src="assets/img/strategy.jpg" alt="Strategy Session" onerror="this.src='https://via.placeholder.com/200'">
+      </div>
+      <h3>Strategy Session</h3>
+      <p class="price">$175</p>
+      <hr>
+      <p class="desc">1-on-1 consultation for founders to plan a compliant, professional launch.</p>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="consult-card">
+      <div class="consult-img-box">
+        <img src="assets/img/audit.jpg" alt="Label & Compliance Audit" onerror="this.src='https://via.placeholder.com/200'">
+      </div>
+      <h3>Label & Compliance Audit</h3>
+      <p class="price">$450</p>
+      <hr>
+      <p class="desc">Review of INCI accuracy, medical claims, and packaging standards.</p>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="consult-card">
+      <div class="consult-img-box">
+        <img src="assets/img/launch.jpg" alt="Full Launch Package" onerror="this.src='https://via.placeholder.com/200'">
+      </div>
+      <h3>Full Launch Package</h3>
+      <p class="price">$1,250</p>
+      <hr>
+      <p class="desc">Comprehensive professional consulting for total retail readiness.</p>
+    </div>
+  </div>
+
+  <div class="center" style="margin-top: 3rem;">
+    <a href="mailto:consulting@racrovetskincare.com" class="consult-btn olive-btn">Explore Consulting Services</a>
+  </div>
+</section>
+
+<!-- SPLIT INFO SECTION (Our Story & Build Your Business) -->
+<section class="consulting-split-section section reveal">
+  <div class="split-box">
+    <div class="split-content">
+      <h2>Our Story</h2>
+      <p>Learn about our thoughtfully formulated products designed to support healthy skin and hair.</p>
+      <a href="index.html#about" class="consult-btn olive-btn">Learn More</a>
+    </div>
+    <!-- Floating image bottom right -->
+    <img src="assets/img/oil-bottle.png" alt="Our Story" class="floating-img" onerror="this.src='https://via.placeholder.com/150'">
+  </div>
+
+  <div class="split-box">
+    <div class="split-content">
+      <h2>Build Your Business<br>With Confidence</h2>
+      <p>Launch or grow your business with Racrovet Consulting, a strategic guidance for entrepreneurs.</p>
+      <a href="#services" class="consulting-link-btn">Explore Consulting Services</a>
+    </div>
+    <!-- Floating image bottom right -->
+    <img src="assets/img/cup.png" alt="Build Business" class="floating-img" onerror="this.src='https://via.placeholder.com/150'">
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="reveal">
+  <p>These products are cosmetic in nature and are not intended to diagnose, treat, cure, or prevent any disease. Results may vary.</p>
   <div class="footer-links">
-    <a href="#">Privacy Policy</a>
-    <a href="#">Terms of Service</a>
-    <a href="#">Refund and Return Policy</a>
-    <a href="#">Shipping Policy</a>
+    <a href="shop.html">Shop</a>
+    <a href="wholesale.html">Wholesale Inquiries</a>
+    <a href="consulting.html">Consulting</a>
+    <a href="influencer-application.html">Influencer Application</a>
   </div>
   <p>© 2026 Racrovet Skincare <br><br> Healthy Hair and Skin Starts With Care</p>
 </footer>
 
-  <!-- BACK TO TOP -->
+<!-- BACK TO TOP -->
 <button id="toTop"><i class="fas fa-chevron-up"></i></button>
 
 <script src="js/script.js"></script>
