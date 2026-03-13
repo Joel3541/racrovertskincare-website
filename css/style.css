@@ -333,6 +333,245 @@ max-width:280px;
 }
 
 
+/* =======================================================
+   CONSULTING PAGE SPECIFIC STYLES (Matches Image Layout)
+======================================================= */
+
+.consulting-page-body {
+  background-color: #FAF7F2; /* Soft cream from the image */
+}
+
+/* Base button styles matching the image (Sharp edges, specific colors) */
+.consult-btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-decoration: none;
+  border-radius: 4px; /* Square edges unlike global buttons */
+  transition: opacity 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+.consult-btn:hover {
+  opacity: 0.85;
+  color: white;
+}
+.pink-btn {
+  background-color: #CBA59E !important; /* Dusty Rose */
+  color: #fff !important;
+}
+.olive-btn {
+  background-color: #5B6651 !important; /* Dark Olive */
+  color: #fff !important;
+}
+
+/* HERO SECTION */
+.consulting-hero {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  padding-top: 10rem; /* Accounts for navbar */
+  padding-bottom: 5rem;
+}
+.hero-text-col {
+  flex: 1;
+  max-width: 550px;
+}
+.hero-text-col h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.2rem;
+  color: #333; /* Dark gray, not green */
+  font-weight: 500;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+}
+.hero-text-col p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.1rem;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+}
+.hero-btn-group {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.hero-img-col {
+  flex: 1;
+}
+.hero-img-col img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+/* SERVICES GRID (Matches "Best Sellers") */
+.consulting-grid-section {
+  text-align: center;
+}
+.consulting-grid-section h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  color: #333;
+  font-weight: 500;
+  margin-bottom: 3rem;
+}
+.consulting-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+.consult-card {
+  text-align: center;
+  background: transparent;
+}
+.consult-img-box {
+  background-color: #F1EBE6; /* Light gray/beige box */
+  padding: 3rem 2rem;
+  margin-bottom: 1.5rem;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 280px;
+}
+.consult-img-box img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+.consult-card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem;
+  color: #333;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+.consult-card .price {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  color: #555;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+.consult-card hr {
+  border: none;
+  border-top: 1px solid #ddd;
+  width: 80%;
+  margin: 0 auto 1rem;
+}
+.consult-card .desc {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.9rem;
+  color: #777;
+  line-height: 1.5;
+  padding: 0 1rem;
+}
+
+/* SPLIT INFO SECTION */
+.consulting-split-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+.split-box {
+  background-color: #F1EBE6;
+  padding: 4rem 3rem;
+  position: relative;
+  overflow: hidden;
+  border-radius: 4px;
+  min-height: 380px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.split-content {
+  position: relative;
+  z-index: 2;
+  max-width: 60%;
+}
+.split-content h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem;
+  color: #333;
+  font-weight: 500;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+.split-content p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+.consulting-link-btn {
+  display: inline-block;
+  background-color: #5B6651;
+  color: #fff;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  transition: opacity 0.3s;
+}
+.consulting-link-btn:hover {
+  opacity: 0.85;
+}
+.floating-img {
+  position: absolute;
+  bottom: -20px;
+  right: -20px;
+  width: 220px;
+  z-index: 1;
+  object-fit: contain;
+}
+
+/* DARK MODE OVERRIDES FOR CONSULTING PAGE */
+body.dark .hero-text-col h1,
+body.dark .consulting-grid-section h2,
+body.dark .consult-card h3,
+body.dark .split-content h2 {
+  color: #fff;
+}
+body.dark .consult-img-box,
+body.dark .split-box {
+  background-color: #1a1a1a;
+}
+body.dark .consult-card hr {
+  border-top: 1px solid #444;
+}
+
+/* MOBILE RESPONSIVENESS */
+@media (max-width: 900px) {
+  .consulting-hero {
+    flex-direction: column;
+    text-align: center;
+    padding-top: 8rem;
+    gap: 2rem;
+  }
+  .hero-text-col {
+    max-width: 100%;
+  }
+  .hero-btn-group {
+    justify-content: center;
+  }
+  .consulting-split-section {
+    grid-template-columns: 1fr;
+  }
+  .split-content {
+    max-width: 100%;
+    margin-bottom: 6rem; /* Make room for floating image on mobile */
+  }
+}
+
+
+
 
 
 
