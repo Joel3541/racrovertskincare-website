@@ -175,36 +175,32 @@ h1, h2 { font-family: 'Playfair Display', serif; color: var(--green); }
 .consulting-hero { 
   display: flex; 
   align-items: center; 
-  padding: 10rem 5% 5rem; /* 5% gives it nice breathing room on the sides */
-  min-height: 75vh; /* Makes the background image nice and tall */
-  background: 
-    linear-gradient(rgba(250, 247, 242, 0.75), rgba(250, 247, 242, 0.75)), 
-    url("../assets/img/consulting-hero.jpg") center/cover no-repeat;
+  justify-content: space-between;
+  gap: 3rem; 
+  padding: 10rem 2rem 5rem; /* 10rem top accounts for navbar */
+  max-width: 1200px; 
+  margin: 0 auto; 
+  background: transparent; /* Flat cream background, no images */
 }
 
-body.dark .consulting-hero {
-  background: 
-    linear-gradient(rgba(18, 18, 18, 0.85), rgba(18, 18, 18, 0.85)), 
-    url("../assets/img/consulting-hero.jpg") center/cover no-repeat;
-}
-
+/* Left side text */
 .hero-text-col { 
   flex: 1; 
-  max-width: 650px; 
+  max-width: 520px; 
 }
 
 .hero-text-col h1 { 
   font-family: 'Playfair Display', serif; 
-  font-size: 3.2rem; 
+  font-size: 3.4rem; 
   color: #333; 
-  font-weight: 500; 
-  line-height: 1.2; 
+  font-weight: 400; /* Lighter font weight to match image */
+  line-height: 1.15; 
   margin-bottom: 1.5rem; 
 }
 
 .hero-text-col p { 
   font-family: 'Montserrat', sans-serif; 
-  font-size: 1.1rem; 
+  font-size: 1.05rem; 
   color: #666; 
   line-height: 1.6; 
   margin-bottom: 2.5rem; 
@@ -212,8 +208,38 @@ body.dark .consulting-hero {
 
 .hero-btn-group { 
   display: flex; 
-  gap: 1rem; 
+  gap: 1.2rem; 
   flex-wrap: wrap; 
+}
+
+/* Right side image */
+.hero-img-col { 
+  flex: 1.2; /* Makes the image side slightly wider than text */
+  display: flex;
+  justify-content: center;
+}
+
+.hero-img-col img { 
+  width: 100%; 
+  max-width: 750px; 
+  height: auto; 
+  object-fit: contain; /* Ensures the whole bottle cluster is visible without cropping */
+  border-radius: 4px; 
+}
+
+/* Mobile Responsiveness for Consulting Hero */
+@media (max-width: 900px) {
+  .consulting-hero {
+    flex-direction: column;
+    text-align: center;
+    padding-top: 8rem;
+  }
+  .hero-text-col {
+    max-width: 100%;
+  }
+  .hero-btn-group {
+    justify-content: center;
+  }
 }
 
 .consulting-grid-section { text-align: center; }
