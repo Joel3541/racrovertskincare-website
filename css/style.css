@@ -171,13 +171,50 @@ h1, h2 { font-family: 'Playfair Display', serif; color: var(--green); }
 .pink-btn { background-color: #CBA59E !important; color: #fff !important; }
 .olive-btn { background-color: #5B6651 !important; color: #fff !important; }
 
-.consulting-hero { display: flex; align-items: center; gap: 4rem; padding-top: 10rem; padding-bottom: 5rem; }
-.hero-text-col { flex: 1; max-width: 550px; }
-.hero-text-col h1 { font-family: 'Playfair Display', serif; font-size: 3.2rem; color: #333; font-weight: 500; line-height: 1.2; margin-bottom: 1.5rem; }
-.hero-text-col p { font-family: 'Montserrat', sans-serif; font-size: 1.1rem; color: #666; line-height: 1.6; margin-bottom: 2.5rem; }
-.hero-btn-group { display: flex; gap: 1rem; flex-wrap: wrap; }
-.hero-img-col { flex: 1; }
-.hero-img-col img { width: 100%; height: auto; object-fit: cover; border-radius: 4px; }
+/* HERO SECTION */
+.consulting-hero { 
+  display: flex; 
+  align-items: center; 
+  padding: 10rem 5% 5rem; /* 5% gives it nice breathing room on the sides */
+  min-height: 75vh; /* Makes the background image nice and tall */
+  background: 
+    linear-gradient(rgba(250, 247, 242, 0.75), rgba(250, 247, 242, 0.75)), 
+    url("../assets/img/consulting-hero.jpg") center/cover no-repeat;
+}
+
+body.dark .consulting-hero {
+  background: 
+    linear-gradient(rgba(18, 18, 18, 0.85), rgba(18, 18, 18, 0.85)), 
+    url("../assets/img/consulting-hero.jpg") center/cover no-repeat;
+}
+
+.hero-text-col { 
+  flex: 1; 
+  max-width: 650px; 
+}
+
+.hero-text-col h1 { 
+  font-family: 'Playfair Display', serif; 
+  font-size: 3.2rem; 
+  color: #333; 
+  font-weight: 500; 
+  line-height: 1.2; 
+  margin-bottom: 1.5rem; 
+}
+
+.hero-text-col p { 
+  font-family: 'Montserrat', sans-serif; 
+  font-size: 1.1rem; 
+  color: #666; 
+  line-height: 1.6; 
+  margin-bottom: 2.5rem; 
+}
+
+.hero-btn-group { 
+  display: flex; 
+  gap: 1rem; 
+  flex-wrap: wrap; 
+}
 
 .consulting-grid-section { text-align: center; }
 .consulting-grid-section h2 { font-family: 'Playfair Display', serif; font-size: 2.5rem; color: #333; font-weight: 500; margin-bottom: 3rem; }
