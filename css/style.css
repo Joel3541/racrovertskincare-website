@@ -118,11 +118,11 @@ body.dark .dropdown-menu { background: #1e1e1e; }
 ======================================================= */
 .hero {
   min-height: 100vh; padding: 6rem 1.5rem; display: flex; align-items: center; justify-content: center;
-  background: linear-gradient(rgba(243,245,238,0.88), rgba(243,245,238,0.88)), url("../assets/img/hero.jpg") center/cover no-repeat;
+  background: linear-gradient(rgba(243,245,238,0.88), rgba(243,245,238,0.88)), url("../assets/img/hero1.jpg") center/cover no-repeat;
   transition: background 0.4s ease;
 }
 body.dark .hero {
-  background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url("../assets/img/hero.jpg") center/cover no-repeat;
+  background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url("../assets/img/hero1.jpg") center/cover no-repeat;
 }
 .hero-content { max-width: 800px; text-align: center; }
 h1, h2 { font-family: 'Playfair Display', serif; color: var(--green); }
@@ -289,7 +289,7 @@ body.dark .consult-card hr { border-top: 1px solid #444; }
 .subtitle-lines::before, .subtitle-lines::after { content: ''; height: 1px; background-color: #555; flex: 1; max-width: 40px; margin: 0 10px; }
 
 .luxury-hero {
-  background: url("../assets/img/hero.jpg") center/cover no-repeat; min-height: 70vh;
+  background: url("../assets/img/hero1.jpg") center/cover no-repeat; min-height: 70vh;
   display: flex; align-items: center; padding: 8rem 2rem 4rem;
 }
 .luxury-hero-content { max-width: 500px; margin-left: 5%; }
