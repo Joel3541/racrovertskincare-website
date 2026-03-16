@@ -289,7 +289,7 @@ body.dark .consult-card hr { border-top: 1px solid #444; }
 .subtitle-lines::before, .subtitle-lines::after { content: ''; height: 1px; background-color: #555; flex: 1; max-width: 40px; margin: 0 10px; }
 
 .luxury-hero {
-  background: url("../assets/img/hero1.jpg") center/cover no-repeat; min-height: 70vh;
+  background: url("../assets/img/shop-hero.jpg") center/cover no-repeat; min-height: 70vh;
   display: flex; align-items: center; padding: 8rem 2rem 4rem;
 }
 .luxury-hero-content { max-width: 500px; margin-left: 5%; }
