@@ -254,75 +254,75 @@ h1, h2 { font-family: 'Playfair Display', serif; color: var(--green); }
 .consult-card .desc { font-family: 'Montserrat', sans-serif; font-size: 0.9rem; color: #777; line-height: 1.5; padding: 0 1rem; }
 
 
-/* SPLIT INFO SECTION */
+/* =======================================================
+   SPLIT INFO SECTION (Dark Boxes with Flush Images)
+======================================================= */
 .consulting-split-section { 
   display: grid; 
   grid-template-columns: 1fr 1fr; 
   gap: 2rem; 
+  margin-top: 2rem;
 }
 
 .split-box { 
-  background-color: #F1EBE6; 
+  background-color: #161616; /* Dark moody background from your image */
   padding: 4rem 3rem; 
   position: relative; 
-  overflow: hidden; 
+  overflow: hidden; /* This acts as a mask so the image doesn't break out */
   border-radius: 4px; 
-  min-height: 450px; /* Made slightly taller to match the elegant image proportions */
+  min-height: 480px; 
   display: flex; 
-  flex-direction: column; 
-  justify-content: center; 
+  align-items: center; /* Centers the text perfectly on the left */
 }
 
-/* Constrain text strictly to the left half */
 .split-content { 
   position: relative; 
   z-index: 2; 
-  max-width: 50%; 
+  width: 55%; /* Keeps text strictly on the left half */
+  padding-right: 1.5rem;
 }
 
 .split-content h2 { 
   font-family: 'Playfair Display', serif; 
-  font-size: 2.2rem; 
-  color: #333; 
+  font-size: 2.4rem; 
+  color: #ffffff; /* White text */
   font-weight: 500; 
   line-height: 1.2; 
-  margin-bottom: 1rem; 
+  margin-bottom: 1.5rem; 
   text-align: left; 
 }
 
 .split-content p { 
   font-family: 'Montserrat', sans-serif; 
   font-size: 1rem; 
-  color: #555; 
+  color: #b3b3b3; /* Light gray text */
   line-height: 1.6; 
-  margin-bottom: 2rem; 
+  margin-bottom: 2.5rem; 
 }
 
-.consulting-link-btn { 
-  display: inline-block; 
-  background-color: #5B6651; /* Dark Olive */
-  color: #fff; 
-  padding: 1rem 2rem; 
-  text-decoration: none; 
-  border-radius: 4px; 
-  font-size: 0.9rem; 
-  transition: opacity 0.3s; 
+/* Specific Muted Green Button from your image */
+.olive-btn {
+  background-color: #65735b !important; 
+  color: #ffffff !important;
+  border-radius: 4px !important; /* Square edges */
+  padding: 1rem 2rem;
+  font-size: 0.95rem;
+  border: none;
+}
+.olive-btn:hover {
+  background-color: #515d48 !important;
 }
 
-.consulting-link-btn:hover { 
-  opacity: 0.85; 
-}
-
-/* THE MAGIC: Anchors the image perfectly to the bottom right */
+/* THE MAGIC: Pins the image to the bottom right */
 .floating-img { 
   position: absolute; 
   bottom: 0; 
   right: 0; 
-  width: 45%; /* Fills 45% of the box width */
-  height: 75%; /* Fills from the bottom up */
+  width: 45%; /* Image takes up exactly 45% of the box width */
+  height: 75%; /* Image fills 75% of the box height */
   z-index: 1; 
-  object-fit: cover; /* Ensures the image fills the rectangle without stretching */
-  border-top-left-radius: 4px; /* Optional subtle curve to match the outer box */
+  object-fit: cover; /* Forces image to act like a perfect rectangle */
+  display: block;
 }
 
 
@@ -447,18 +447,22 @@ body.dark .dark-toggle .sun { transform: translateY(0); opacity: 1; }
 
 
 @media (max-width: 900px) {
-  /* ... your existing hero media queries ... */
-  
-  .consulting-split-section { grid-template-columns: 1fr; }
-  
-  .split-content { 
-    max-width: 100%; 
-    margin-bottom: 220px; /* Makes room for the image at the bottom */
+  /* ... existing hero code ... */
+
+  .consulting-split-section { 
+    grid-template-columns: 1fr; 
   }
-  
-  .floating-img { 
+  .split-box {
+    padding: 3rem 2rem;
+    align-items: flex-start;
+  }
+  .split-content { 
     width: 100%; 
-    height: 200px; 
-    border-top-left-radius: 0; /* Removes inner curve on mobile */
+    padding-right: 0;
+    margin-bottom: 240px; /* Forces open space at the bottom for the image */
+  }
+  .floating-img {
+    width: 100%; /* Image fills the whole bottom on mobile */
+    height: 220px;
   }
 }
