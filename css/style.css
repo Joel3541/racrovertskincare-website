@@ -159,7 +159,27 @@ h1, h2 { font-family: 'Playfair Display', serif; color: var(--green); }
 .email-form button { margin-top: 0.5rem; width: 100%; }
 
 
+/* Update your email form CSS to include the 'select' tag */
+.email-form input, 
+.email-form textarea, 
+.email-form select { 
+  width: 100%; 
+  padding: 0.9rem 1.5rem; 
+  border-radius: 10px; 
+  border: 1px solid #ccc; 
+  font-family: inherit; 
+  outline: none; 
+  box-sizing: border-box; 
+  background: transparent;
+  color: #333;
+}
 
+/* Fix text color for dropdown in Dark Mode */
+body.dark .email-form select {
+  background: #2a2a2a; 
+  border: 1px solid #444; 
+  color: #fff;
+}
 
 
 /* =======================================================
