@@ -4,11 +4,12 @@
    1. VARIABLES & BASE RESETS
 ======================================================= */
 :root {
-  --green: #9CAF88;
-  --light-green: #4f7c5b;
-  --cream: #FAF7F2;
-  --bg-soft: #f4f6f0;
+  --green: #355E3B; /* Forest Green */
+  --light-green: #487A4F; /* Slightly lighter Forest Green for hovers */
+  --cream: #F3F5EE; /* Brand Cream */
+  --bg-soft: #EAECE5; /* Slightly darker cream for input boxes and alternate sections */
 }
+
 
 * {
   margin: 0;
@@ -152,9 +153,27 @@ h1, h2 { font-family: 'Playfair Display', serif; color: var(--green); }
 .waitlist-form { display: flex; justify-content: center; gap: 0.75rem; flex-wrap: wrap; margin-top: 1.5rem; }
 .waitlist-form input { padding: 0.9rem 1.5rem; border-radius: 30px; border: 1px solid #ccc; width: 100%; max-width: 320px; font-family: inherit; outline: none; }
 
-.email-form { background: var(--bg-soft); padding: 2.5rem 2rem; border-radius: 12px; max-width: 500px; margin: 2rem auto 0; display: flex; flex-direction: column; gap: 1rem; align-items: center; }
-.email-form input, .email-form textarea { width: 100%; padding: 0.9rem 1.5rem; border-radius: 10px; border: 1px solid #ccc; font-family: inherit; outline: none; box-sizing: border-box; }
-.email-form button { margin-top: 0.5rem; width: 100%; }
+/* Update your email form CSS to include the 'select' tag */
+.email-form input, 
+.email-form textarea, 
+.email-form select { 
+  width: 100%; 
+  padding: 0.9rem 1.5rem; 
+  border-radius: 10px; 
+  border: 1px solid #ccc; 
+  font-family: inherit; 
+  outline: none; 
+  box-sizing: border-box; 
+  background: transparent;
+  color: #333;
+}
+
+/* Fix text color for dropdown in Dark Mode */
+body.dark .email-form select {
+  background: #2a2a2a; 
+  border: 1px solid #444; 
+  color: #fff;
+}
 
 
 /* =======================================================
@@ -466,3 +485,95 @@ body.dark .dark-toggle .sun { transform: translateY(0); opacity: 1; }
     height: 220px;
   }
 }
+
+
+/* =======================================================
+   CONSULTING CUSTOM SECTIONS (Grid & Split Info)
+======================================================= */
+
+/* 1. Services Grid */
+.consulting-grid-section { text-align: center; }
+.consulting-grid { 
+  display: grid; 
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+  gap: 2rem; 
+  margin-top: 2rem;
+}
+.consult-card { text-align: center; background: transparent; }
+.consult-img-box { 
+  background-color: #EAECE5; /* Soft contrasting cream */
+  padding: 3rem 2rem; 
+  margin-bottom: 1.5rem; 
+  border-radius: 8px; 
+  display: flex; justify-content: center; align-items: center; 
+  height: 280px; 
+}
+.consult-img-box img { max-width: 100%; max-height: 100%; object-fit: contain; }
+.consult-card h3 { font-family: 'Playfair Display', serif; font-size: 1.3rem; color: var(--green); margin-bottom: 0.5rem; }
+.consult-card .price { font-family: 'Montserrat', sans-serif; font-size: 1.1rem; color: #555; font-weight: 500; margin-bottom: 1rem; }
+.consult-card hr { border: none; border-top: 1px solid #ddd; width: 60%; margin: 0 auto 1rem; }
+.consult-card .desc { font-family: 'Montserrat', sans-serif; font-size: 0.95rem; color: #666; line-height: 1.6; padding: 0 1rem; }
+
+/* 2. Split Info Section */
+.consulting-split-section { 
+  display: grid; 
+  grid-template-columns: 1fr 1fr; 
+  gap: 2rem; 
+  margin-top: 2rem;
+}
+.split-box { 
+  background-color: #1E2B22; /* Very deep luxurious Forest Green */
+  padding: 4rem 3rem; 
+  position: relative; 
+  overflow: hidden; 
+  border-radius: 8px; 
+  min-height: 480px; 
+  display: flex; 
+  align-items: center; 
+}
+.split-content { 
+  position: relative; 
+  z-index: 2; 
+  width: 55%; 
+  padding-right: 1.5rem;
+}
+.split-content h2 { 
+  font-family: 'Playfair Display', serif; 
+  font-size: 2.2rem; 
+  color: #ffffff; 
+  font-weight: 500; 
+  line-height: 1.2; 
+  margin-bottom: 1.5rem; 
+  text-align: left; 
+}
+.split-content p { 
+  font-family: 'Montserrat', sans-serif; 
+  font-size: 1rem; 
+  color: #D3D8D0; /* Soft tinted white */
+  line-height: 1.6; 
+  margin-bottom: 2.5rem; 
+}
+.floating-img { 
+  position: absolute; 
+  bottom: 0; 
+  right: 0; 
+  width: 45%; 
+  height: 75%; 
+  z-index: 1; 
+  object-fit: cover; 
+  display: block;
+}
+
+/* Dark Mode Overrides for these sections */
+body.dark .consult-img-box { background-color: #1a1a1a; }
+body.dark .consult-card hr { border-top: 1px solid #444; }
+body.dark .consult-card .price, body.dark .consult-card .desc { color: #aaa; }
+
+/* Mobile Responsiveness for Custom Sections */
+@media (max-width: 900px) {
+  .consulting-split-section { grid-template-columns: 1fr; }
+  .split-box { padding: 3rem 2rem; align-items: flex-start; }
+  .split-content { width: 100%; padding-right: 0; margin-bottom: 240px; }
+  .floating-img { width: 100%; height: 220px; }
+}
+
