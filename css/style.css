@@ -589,10 +589,10 @@ body.dark .consult-card .price, body.dark .consult-card .desc { color: #aaa; }
    FAITH BANNER BACKGROUND
 ======================================================= */
 .faith-banner {
-  background: linear-gradient(rgba(243,245,238,0.88), rgba(243,245,238,0.88)), 
+  background: linear-gradient(rgba(250,255,240,0.88), rgba(243,245,238,0.88)), 
               url("../assets/img/faith-banner.jpg") center/cover no-repeat;
 }
 body.dark .faith-banner {
-  background: linear-gradient(rgba(18,18,18,0.85), rgba(18,18,18,0.85)), 
+  background: linear-gradient(rgba(20,20,20,0.85), rgba(20,20,20,0.85)), 
               url("../assets/img/faith-banner.jpg") center/cover no-repeat;
 }
